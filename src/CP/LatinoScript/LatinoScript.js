@@ -89,7 +89,8 @@
       Array.prototype.paraCada = Array.prototype.forEach;
       
       //code remplace
-      function traductorLatjsAjs(code1){
+      function traductorLatjsAjs(code1, metod){
+       if(metod == 1){
         code1 = code1.replaceAll(/\bsolicitarPantallaCompleta\b/gi, "requestFullScreen");
         code1 = code1.replaceAll(/\bcancelarPantallaCompleta\b/gi, "cancelFullScreen");
         code1 = code1.replaceAll(/\bMates\b/gi, "Math");
@@ -152,8 +153,11 @@
         code1 = code1.replaceAll(/\beste\b/gi, "this");
         code1 = code1.replaceAll(/\besperar\b/gi, "await");
         return code1;
+       }else if(metod == 2){
+           
+       }
       }
-      code = traductorLatjsAjs(code);
+      code = traductorLatjsAjs(code, 1);
       if(matches1 != null){
         matches1.forEach(match => code = code.replace(mark, match));
       }
