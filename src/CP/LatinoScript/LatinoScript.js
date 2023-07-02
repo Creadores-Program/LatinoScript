@@ -62,7 +62,7 @@
       let rango = function(start, stop=undefined, step=1){
         let startArray = stop  === undefined ? 0 : start;
         let stopArray = stop  === undefined ? start : stop;
-        return Array.from({ length: (stopArray - startArray) / step + 1}, (_, i) =&gt; startArray + (i * step));
+        return Array.from({ length: (stopArray - startArray) / step + 1}, (_, i) => startArray + (i * step));
       };
       let alerta = function(txt){
         alert(txt);
