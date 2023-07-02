@@ -24,9 +24,9 @@
       let latjsPrefix = "[LatinoScript] ";
       console.info(latjsPrefix + "Ejecutando " + code + "...");
       let mark = "{{~strng~}}";
-      let matches1 = code.match(/'([^\\']|\\')*'/g);;
-      let matches2 = code.match(/"([^\\"]|\\")*"/g);;
-      let matches3 = code.match(/`([^\\`]|\\`)*`/g);;
+      let matches1 = code.match(/'([^\\']|\\')*'/g);
+      let matches2 = code.match(/"([^\\"]|\\")*"/g);
+      let matches3 = code.match(/`([^\\`]|\\`)*`/g);
       if(matches1 != null){
         matches1.forEach(match => code = code.replace(match, mark));
       }
@@ -43,7 +43,7 @@
       }
       let poner = function(txt){
         alert(txt);
-      }
+      };
       let consola = {};
       consola = console;
       consola.registrar = console.log;
@@ -53,7 +53,7 @@
       consola.advertir = console.warn;
       let imprimir = function(txt){
         alert(txt);
-      }
+      };
       let escribir= imprimir;
       let cierto = true;
       let verdadero = true;
@@ -74,7 +74,7 @@
       };
       let establecerTiempoEspera = function(functi, time){
         setTimeout(functi, time);
-      }
+      };
       
       let preguntar = function(txt){
         confirm(txt);
