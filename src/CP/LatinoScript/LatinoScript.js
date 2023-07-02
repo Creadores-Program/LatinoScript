@@ -110,7 +110,6 @@
         code1 = code1.replaceAll(/\bexportarjs\b/gi, "export");
         code1 = code1.replaceAll(/\bnombre-modulo\b/gi, "module-name");
         code1 = code1.replaceAll(/\bnombre\b/gi, "name");
-        code1 = code1.replaceAll(/\bdefecto\b/gi, "default");
         code1 = code1.replaceAll(/\bcaso\b/gi, "case");
         code1 = code1.replaceAll("#", "//");
         code1 = code1.replaceAll(/\binicio\b/gi, "{");
@@ -132,6 +131,7 @@
         code1 = code1.replaceAll(/\bencabezados\b/gi, "headers");
         code1 = code1.replaceAll(/\bmetodo\b/gi, "method");
         code1 = code1.replaceAll(/\bbuscarUrl\b/gi, "fetch");
+        code1 = code1.replaceAll(/\bconsultarUrl\b/gi, "fetch");
         code1 = code1.replaceAll(/\bosi\b/gi, "}else if");
         code1 = code1.replaceAll(/\bencadenar\b/gi, "stringify");
         code1 = code1.replaceAll(/\bclase\b/gi, "class");
@@ -154,7 +154,59 @@
         code1 = code1.replaceAll(/\besperar\b/gi, "await");
         return code1;
        }else if(metod == 2){
-           
+        code1 = code1.replaceAll(/\brequestFullScreen\b/gi, "solicitarPantallaCompleta");
+        code1 = code1.replaceAll(/\bcancelFullScreen\b/gi, "cancelarPantallaCompleta");
+        code1 = code1.replaceAll(/\bMath\b/gi, "Mates");
+        code1 = code1.replaceAll(/\bfloor\b/gi, "piso");
+        code1 = code1.replaceAll(/\brandom\b/gi, "aleatorio");
+        code1 = code1.replaceAll(/\blocalStorage\b/gi, "almLocal");
+        code1 = code1.replaceAll(/\bgetItem\b/gi, "obtenerObj");
+        code1 = code1.replaceAll(/\bsetItem\b/gi, "estableserObj");
+        code1 = code1.replaceAll(/\bstop\b/gi, "detener");
+        code1 = code1.replaceAll(/\bthrow\b/gi, "tirarError");
+        code1 = code1.replaceAll(/\bfor\b/gi, "para");
+        code1 = code1.replaceAll(/\bfrom\b/gi, "desde");
+        code1 = code1.replaceAll(/\bdefault\b/gi, "defecto");
+        code1 = code1.replaceAll(/\bimport\b/gi, "importarjs");
+        code1 = code1.replaceAll(/\bexport\b/gi, "exportarjs");
+        code1 = code1.replaceAll(/\bmodule-name\b/gi, "nombre-modulo");
+        code1 = code1.replaceAll(/\bname\b/gi, "nombre");
+        code1 = code1.replaceAll(/\bcase\b/gi, "caso");
+        code1 = code1.replaceAll("{", "inicio");
+        code1 = code1.replaceAll("}", "fin");
+        code1 = code1.replaceAll(/\belse if\b/gi, "osi");
+        code1 = code1.replaceAll(/\belse\b/gi, "sino");
+        code1 = code1.replaceAll(/\bswitch\b/gi, "elegir");
+        code1 = code1.replaceAll(/\break\b/gi, "romper");
+        code1 = code1.replaceAll(/\bdo\b/gi, "hacer");
+        code1 = code1.replaceAll(/\bwhile\b/gi, "mientras");
+        code1 = code1.replaceAll(/\bfunction\b/gi, "funcion");
+        code1 = code1.replaceAll(/\blet\b/gi, "local");
+        code1 = code1.replaceAll(/\bconst\b/gi, "constante");
+        code1 = code1.replaceAll(/\bnew\b/gi, "nuevo");
+        code1 = code1.replaceAll(/\bas\b/gi, "como");
+        code1 = code1.replaceAll(/\bcontinue\b/gi, "continuar");
+        code1 = code1.replaceAll(/\btype\b/gi, "tipo");
+        code1 = code1.replaceAll(/\bvar\b/gi, "global");
+        code1 = code1.replaceAll(/\bbody\b/gi, "cuerpo");
+        code1 = code1.replaceAll(/\bheaders\b/gi, "encabezados");
+        code1 = code1.replaceAll(/\bmethod\b/gi, "metodo");
+        code1 = code1.replaceAll(/\bfetch\b/gi, "buscarUrl");
+        code1 = code1.replaceAll(/\bestringify\b/gi, "encadenar");
+        code1 = code1.replaceAll(/\bclass\b/gi, "clase");
+        code1 = code1.replaceAll(/\bimplements\b/gi, "implementos");
+        code1 = code1.replaceAll(/\bextends\b/gi, "extiende");
+        code1 = code1.replaceAll(/\bstatic\b/gi, "estatico");
+        code1 = code1.replaceAll(/\baddEventListener\b/gi, "detectarEvento");
+        code1 = code1.replaceAll(/\basync\b/gi, "asincrono");
+        code1 = code1.replaceAll(/\bin\b/gi, "en");
+        code1 = code1.replaceAll(/\blength\b/gi, "longitud");
+        code1 = code1.replaceAll(/\bof\b/gi, "de");
+        code1 = code1.replaceAll(/\bif\b/gi, "si");
+        code1 = code1.replaceAll(/\breturn\b/gi, "retornar");
+        code1 = code1.replaceAll(/\bthis\b/gi, "esto");
+        code1 = code1.replaceAll(/\bawait\b/gi, "esperar");
+        return code1;
        }
       }
       code = traductorLatjsAjs(code, 1);
@@ -171,7 +223,7 @@
       try{
         eval(codelatjs);
       }catch(error){
-        error = traductorLatjsAjs(error);
+        error = traductorLatjsAjs(error, 2);
         console.error(latjsPrefix + "[Error] " + error);
       }
       //End String prototype
