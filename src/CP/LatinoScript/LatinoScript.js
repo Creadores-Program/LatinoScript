@@ -16,8 +16,8 @@
       }
       function incluir(url){
         fetch(url)
-        .then(response =&gt; response.text())
-        .then(text =&gt; latjs(text));
+        .then(response => response.text())
+        .then(text => latjs(text));
       }
       let importar = incluir;
       code = " " + code + " ";
@@ -28,13 +28,13 @@
       let matches2 = code.match(/"([^\\"]|\\")*"/g);;
       let matches3 = code.match(/`([^\\`]|\\`)*`/g);;
       if(matches1 != null){
-        matches1.forEach(match =&gt; code = code.replace(match, mark));
+        matches1.forEach(match => code = code.replace(match, mark));
       }
       if(matches2 != null){
-        matches2.forEach(match =&gt; code = code.replace(match, mark));
+        matches2.forEach(match => code = code.replace(match, mark));
       }
       if(matches3 != null){
-        matches3.forEach(match =&gt; code = code.replace(match, mark));
+        matches3.forEach(match => code = code.replace(match, mark));
       }
       
       //Funciones y variables
@@ -54,9 +54,7 @@
       let imprimir = function(txt){
         alert(txt);
       }
-      let escribir= function(txt){
-        alert(txt);
-      }
+      let escribir= imprimir;
       let cierto = true;
       let verdadero = true;
       let falso = false;
@@ -81,9 +79,7 @@
       let preguntar = function(txt){
         confirm(txt);
       };
-      let confirmar = function(txt){
-        confirm(txt);
-      };
+      let confirmar = preguntar;
       
       //String prototype
       String.prototype.reemplazarTodo = String.prototype.replaceAll;
@@ -140,8 +136,8 @@
         code = code.replaceAll(/\bimplementos\b/gi, "implements");
         code = code.replaceAll(/\bextiende\b/gi, "extends");
         code = code.replaceAll(/\bestatico\b/gi, "static");
-      code = code.replaceAll(/\bdetectarEvento\b/gi, "addEventListener");
-      code = code.replaceAll(/\basincrono\b/gi, "async");
+        code = code.replaceAll(/\bdetectarEvento\b/gi, "addEventListener");
+        code = code.replaceAll(/\basincrono\b/gi, "async");
         code = code.replaceAll(/\ben\b/gi, "in");
         code = code.replaceAll(/\blongitud\b/gi, "length");
         code = code.replaceAll(/\bde\b/gi, "of");
@@ -156,13 +152,13 @@
         code = code.replaceAll(/\besperar\b/gi, "await");
       
       if(matches1 != null){
-        matches1.forEach(match =&gt; code = code.replace(mark, match));
+        matches1.forEach(match => code = code.replace(mark, match));
       }
       if(matches2 != null){
-        matches2.forEach(match =&gt; code = code.replace(mark, match));
+        matches2.forEach(match => code = code.replace(mark, match));
       }
       if(matches3 != null){
-        matches3.forEach(match =&gt; code = code.replace(mark, match));
+        matches3.forEach(match => code = code.replace(mark, match));
       }
       codelatjs += code;
       try{
@@ -181,8 +177,8 @@
     }
     function latjsUrl(url){
       fetch(url)
-      .then(response =&gt; response.text())
-      .then(text =&gt; latjs(text));
+      .then(response => response.text())
+      .then(text => latjs(text));
     }
     console.info("[LatinoScript] Listo!");
     console.info("[LatinoScript] Usa latjs(cod); o latjsUrl(URL); para ejecutar LatinoScript!");
