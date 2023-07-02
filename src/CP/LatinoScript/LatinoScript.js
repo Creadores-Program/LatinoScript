@@ -177,7 +177,7 @@
         code1 = code1.replaceAll(/\belse if\b/gi, "osi");
         code1 = code1.replaceAll(/\belse\b/gi, "sino");
         code1 = code1.replaceAll(/\bswitch\b/gi, "elegir");
-        code1 = code1.replaceAll(/\break\b/gi, "romper");
+        code1 = code1.replaceAll(/\bbreak\b/gi, "romper");
         code1 = code1.replaceAll(/\bdo\b/gi, "hacer");
         code1 = code1.replaceAll(/\bwhile\b/gi, "mientras");
         code1 = code1.replaceAll(/\bfunction\b/gi, "funcion");
