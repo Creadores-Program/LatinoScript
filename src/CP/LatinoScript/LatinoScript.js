@@ -1,4 +1,3 @@
- 
     console.info("[LatinoScript] Iniciando...");
     console.info("[LatinoScript] Cargando...");
     console.info("[LatinoScript] Versión 0.1.0 alpha");
@@ -168,10 +167,8 @@
       codelatjs += code;
       try{
         eval(codelatjs);
-        alert(codelatjs);
       }catch(error){
         console.error(latjsPrefix + "[Error] " + error);
-        alert(error);
       }
       //End String prototype
       
