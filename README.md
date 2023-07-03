@@ -6,3 +6,4 @@
 <h2>Contenido:</h2>
 <a href="#que-es-latinoscript">¿Que es LatinoScript?</a>
 <h2>¿Que es LatinoScript?</h2>
+LatinoScript es un Lenguaje de programación con sintaxis en Español escrito en <a href="https://es.m.wikipedia.org/wiki/JavaScript">JavaScript</a> y Basado en Latino C y JavaScript!
