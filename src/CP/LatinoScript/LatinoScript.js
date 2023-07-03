@@ -8,7 +8,6 @@
     console.info("Facebook: https://facebook.com/profile.php?id=100089507007036");
     console.info("[LatinoScript] Basado en JavaScript y Latino");
     console.info("[LatinoScript] Cargando Lenguaje...");
-    let codelatjs = "";
     function latjs(code){
       
       function incluirjs(code){
@@ -160,9 +159,8 @@
       if(matches3 != null){
         matches3.forEach(match => code = code.replace(mark, match));
       }
-      codelatjs += code;
       try{
-        eval(codelatjs);
+        eval(code);
       }catch(error){
         console.error(latjsPrefix + "[Error] " + error);
       }
@@ -179,6 +177,21 @@
       fetch(url)
       .then(response => response.text())
       .then(text => latjs(text));
+    }
+    if(document.getElementsByTagName("latjs")){
+        let latjsetiqueta = document.getElementsByTagName("latjs");
+        let latjsetiquetaQuery = document.querySelector('latjs').getAttribute('src');
+        if(latjsetiquetaQuery){
+          latjsUrl(latjsetiquetaQuery);
+        }
+        for(let i = 0; i < latjsetiqueta.length; i++){
+            if(latjsetiqueta[i].innerHTML != null && latjsetiqueta[i].innerHTML != ""){
+                let contenidolatjsetiqueta = latjsetiqueta[i].innerHTML;
+                latjs(contenidolatjsetiqueta);
+            }
+            }
+            
+        }
     }
     console.info("[LatinoScript] Listo!");
     console.info("[LatinoScript] Usa latjs(cod); o latjsUrl(URL); para ejecutar LatinoScript!");
