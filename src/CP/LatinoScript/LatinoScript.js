@@ -185,6 +185,7 @@
           latjsUrl(latjsetiquetaQuery);
         }
         for(let i = 0; i < latjsetiqueta.length; i++){
+            latjsetiqueta[i].style.visibility = "hidden";
             if(latjsetiqueta[i].innerHTML != null && latjsetiqueta[i].innerHTML != ""){
                 let contenidolatjsetiqueta = latjsetiqueta[i].innerHTML;
                 latjs(contenidolatjsetiqueta);
