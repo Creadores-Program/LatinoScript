@@ -191,6 +191,7 @@
             if(latjsetiqueta[i].innerHTML != null && latjsetiqueta[i].innerHTML != ""){
                 let contenidolatjsetiqueta = latjsetiqueta[i].innerHTML;
                 latjs(contenidolatjsetiqueta);
+                latjsetiqueta[i].innerHTML = "";
             }
         }
     }
