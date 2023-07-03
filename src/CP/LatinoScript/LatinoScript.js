@@ -190,8 +190,6 @@
                 let contenidolatjsetiqueta = latjsetiqueta[i].innerHTML;
                 latjs(contenidolatjsetiqueta);
             }
-            }
-            
         }
     }
     console.info("[LatinoScript] Listo!");
