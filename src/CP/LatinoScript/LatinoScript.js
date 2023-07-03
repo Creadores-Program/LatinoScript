@@ -151,6 +151,7 @@
         code = code.replaceAll(/\besperar\b/gi, "await");
         code = code.replaceAll(/\bintentar\b/gi, "try");
         code = code.replaceAll(/\batrapar\b/gi, "catch");
+        code = code.replaceAll(/\bcapturar\b/gi, "catch");
         code = code.replaceAll(/\bfinalmente\b/gi, "finally");
       if(matches1 != null){
         matches1.forEach(match => code = code.replace(mark, match));
