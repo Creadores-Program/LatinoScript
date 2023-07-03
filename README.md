@@ -4,4 +4,5 @@
   <a href="https://github.com/Trollhunters501/LatinoScript/blob/main/README.md">Español</a><br/>--|><br/>
 <p>Lenguaje de programación que se puede ejecutar en casi cualquier sistema, de código abierto para latinos y de habla hispana. Escrito en JavaScript</p>
 <h2>Contenido:</h2>
-<a href="">¿Que es LatinoScript?</a>
+<a href="#¿Que es LatinoScript?">¿Que es LatinoScript?</a>
+<h2>¿Que es LatinoScript?</h2>
