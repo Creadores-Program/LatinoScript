@@ -81,6 +81,12 @@
       let confirmar = preguntar;
       
       //String prototype
+      let Cadena = {};
+      Cadena.prototipo = String.prototype;
+      Cadena = String;
+      let Formacion = {};
+      Formacion.prototipo = Array.prototype;
+      Formacion = Array;
       String.prototype.reemplazarTodo = String.prototype.replaceAll;
       String.prototype.reemplazar = String.prototype.replace;
       
@@ -89,6 +95,7 @@
       
       //code remplace
         code = code.replaceAll(/\bsolicitarPantallaCompleta\b/gi, "requestFullScreen");
+        code = code.replaceAll(/\bestilo\b/gi, "style");
         code = code.replaceAll(/\bcancelarPantallaCompleta\b/gi, "cancelFullScreen");
         code = code.replaceAll(/\bMates\b/gi, "Math");
         code = code.replaceAll(/\bpiso\b/gi, "floor");
