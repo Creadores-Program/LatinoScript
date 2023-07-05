@@ -84,7 +84,11 @@
           if(!sistem){
               return navigator.appVersion.toLowerCase();
           }else{
-              return navigator.appVersion.toLowerCase().indexOf(sistem);
+              if(navigator.appVersion.toLowerCase().indexOf(sistem) != -1){
+                return true;
+              }else{
+                return false;
+              }
           }
       };
       sis.operativo = sis.op;
