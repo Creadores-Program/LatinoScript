@@ -82,9 +82,9 @@
       let sis = {};
       sis.op = function(sistem){
           if(!sistem){
-              return navigator.userAgent;
+              return navigator.appVersion.toLowerCase();
           }else{
-              return navigator.userAgent.indexOf(sistem);
+              return navigator.appVersion.toLowerCase().indexOf(sistem);
           }
       };
       sis.operativo = sis.op;
