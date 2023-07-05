@@ -97,6 +97,10 @@
         code = code.replaceAll(/\bsolicitarPantallaCompleta\b/gi, "requestFullScreen");
         code = code.replaceAll(/\bestilo\b/gi, "style");
         code = code.replaceAll(/\bcancelarPantallaCompleta\b/gi, "cancelFullScreen");
+        code = code.replaceAll(/\bdocumento\b/gi, "document");
+        code = code.replaceAll(/\bobtenerElementoPorId\b/gi, "getElementById");
+        code = code.replaceAll(/\bobtenerElementosPorNombreEtiqueta\b/gi, "getElementsByTagName");
+        code = code.replaceAll(/\bunirse\b/gi, "join");
         code = code.replaceAll(/\bMates\b/gi, "Math");
         code = code.replaceAll(/\bpiso\b/gi, "floor");
         code = code.replaceAll(/\baleatorio\b/gi, "random");
