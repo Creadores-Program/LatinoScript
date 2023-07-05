@@ -79,6 +79,13 @@
         confirm(txt);
       };
       let confirmar = preguntar;
+      let sis = {};
+      sis.op = navigator.userAgent.indexOf;
+      sis.operativo = sis.op;
+      sis.avisar = function(level){
+        console.warn(latjsPrefix + "No soportado");
+      }
+      sis = navigator.userAgent;
       
       //String prototype
       let Cadena = {};
@@ -101,6 +108,19 @@
         code = code.replaceAll(/\bobtenerElementoPorId\b/gi, "getElementById");
         code = code.replaceAll(/\bobtenerElementosPorNombreEtiqueta\b/gi, "getElementsByTagName");
         code = code.replaceAll(/\bunirse\b/gi, "join");
+        code = code.replaceAll(/\bdividirCadena\b/gi, "split");
+        code = code.replaceAll(/\benfocar\b/gi, "focus");
+        code = code.replaceAll(/\bcrearElemento\b/gi, "createElement");
+        code = code.replaceAll(/\bañadirNodo\b/gi, "appendChild");
+        code = code.replaceAll(/\beliminarNodo\b/gi, "removeChild");
+        code = code.replaceAll(/\bmapa\b/gi, "map");
+        code = code.replaceAll(/\bfiltrar\b/gi, "filter");
+        code = code.replaceAll(/\breducir\b/gi, "reduce");
+        code = code.replaceAll(/\balguna\b/gi, "some");
+        code = code.replaceAll(/\bincluye\b/gi, "includes");
+        code = code.replaceAll(/\brebanada\b/gi, "slice");
+        code = code.replaceAll(/\bempalme\b/gi, "splice");
+          
         code = code.replaceAll(/\bMates\b/gi, "Math");
         code = code.replaceAll(/\bpiso\b/gi, "floor");
         code = code.replaceAll(/\baleatorio\b/gi, "random");
