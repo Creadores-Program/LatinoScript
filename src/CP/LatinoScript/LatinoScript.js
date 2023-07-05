@@ -80,12 +80,17 @@
       };
       let confirmar = preguntar;
       let sis = {};
-      sis.op = navigator.userAgent.indexOf;
+      sis.op = function(sistem){
+          if(!sistem){
+              return navigator.userAgent;
+          }else{
+              return navigator.userAgent.indexOf(sistem);
+          }
+      };
       sis.operativo = sis.op;
       sis.avisar = function(level){
         console.warn(latjsPrefix + "No soportado");
-      }
-      sis = navigator.userAgent;
+      };
       
       //String prototype
       let Cadena = {};
