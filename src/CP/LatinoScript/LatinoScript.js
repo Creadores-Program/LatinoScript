@@ -54,6 +54,9 @@
         alert(txt);
       };
       let escribir = imprimir;
+      let escribirPregunta = function(prompt1, txt){
+          prompt(prompt1, txt);
+      }
       let cierto = true;
       let verdadero = true;
       let falso = false;
