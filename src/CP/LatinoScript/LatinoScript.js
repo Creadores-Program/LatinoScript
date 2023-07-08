@@ -110,12 +110,14 @@
       Array.prototype.paraCada = Array.prototype.forEach;
       
       //code remplace
+        code = code.replaceAll(/\bcontenidoHTML\b/gi, "innerHTML");
         code = code.replaceAll(/\bsolicitarPantallaCompleta\b/gi, "requestFullScreen");
         code = code.replaceAll(/\bestilo\b/gi, "style");
         code = code.replaceAll(/\bcancelarPantallaCompleta\b/gi, "cancelFullScreen");
         code = code.replaceAll(/\bdocumento\b/gi, "document");
         code = code.replaceAll(/\bobtenerElementoPorId\b/gi, "getElementById");
         code = code.replaceAll(/\bobtenerElementosPorNombreEtiqueta\b/gi, "getElementsByTagName");
+        code = code.replaceAll(/\bobtenerElementosPorClase\b/gi, "getElementsByClassName");
         code = code.replaceAll(/\bunirse\b/gi, "join");
         code = code.replaceAll(/\bdividirCadena\b/gi, "split");
         code = code.replaceAll(/\benfocar\b/gi, "focus");
