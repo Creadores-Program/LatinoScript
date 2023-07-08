@@ -53,7 +53,7 @@
       let imprimir = function(txt){
         alert(txt);
       };
-      let escribir= imprimir;
+      let escribir = imprimir;
       let cierto = true;
       let verdadero = true;
       let falso = false;
@@ -110,6 +110,7 @@
       Array.prototype.paraCada = Array.prototype.forEach;
       
       //code remplace
+        code = code.replaceAll(/\bEscribir\b/gi, "write");
         code = code.replaceAll(/\bcontenidoHTML\b/gi, "innerHTML");
         code = code.replaceAll(/\bsolicitarPantallaCompleta\b/gi, "requestFullScreen");
         code = code.replaceAll(/\bestilo\b/gi, "style");
