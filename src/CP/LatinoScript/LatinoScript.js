@@ -236,6 +236,8 @@
         for(let i = 0; i < latjsetiqueta.length; i++){
             latjsetiqueta[i].style.visibility = "hidden";
             latjsetiqueta[i].style.display = "none";
+            latjsetiqueta[i].style.height = "0px";
+            latjsetiqueta[i].style.width = "0px";
             if(latjsetiqueta[i].innerHTML != null && latjsetiqueta[i].innerHTML != ""){
                 let contenidolatjsetiqueta = latjsetiqueta[i].innerHTML;
                 latjs(contenidolatjsetiqueta);
