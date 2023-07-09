@@ -113,7 +113,7 @@
       Array.prototype.paraCada = Array.prototype.forEach;
       
       //code remplace
-        code = code.replaceAll(/\bescribirTexto\b/gi, "write");
+        code = code.replaceAll(/\bescribe\b/gi, "write");
         code = code.replaceAll(/\bcontenidoHTML\b/gi, "innerHTML");
         code = code.replaceAll(/\bsolicitarPantallaCompleta\b/gi, "requestFullScreen");
         code = code.replaceAll(/\bestilo\b/gi, "style");
