@@ -98,7 +98,20 @@
       sis.avisar = function(level){
         console.warn(latjsPrefix + "No soportado");
       };
-      
+
+      //Storage prototype
+      Storage.prototype.tamaño = function(units) {
+          'use strict';
+          units = units ? units.toUpperCase() : 'MB';
+          let size = unescape(encodeURIComponent(JSON.stringify(this))).length;
+          switch (units){
+              case 'B': return [size,'B'].join('');
+              case 'KB': return [+(size / 1024).toFixed(3),'KB'].join('');
+              case 'MB': return [+(size / 1024 / 1024).toFixed(3),'MB'].join('');
+              case 'GB': return [+(size / 1024 / 1024 / 1024).toFixed(3),'GB'].join('');
+              default: return [+(size / 1024 / 1024).toFixed(3),'MB'].join('');
+          }
+      };
       //String prototype
       let Cadena = {};
       Cadena.prototipo = String.prototype;
