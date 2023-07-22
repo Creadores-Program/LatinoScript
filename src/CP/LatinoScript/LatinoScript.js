@@ -121,6 +121,9 @@
       Formacion = Array;
       String.prototype.reemplazarTodo = String.prototype.replaceAll;
       String.prototype.reemplazar = String.prototype.replace;
+      String.prototype.longitud = function(){
+          return this.length;
+      };
       
       //Array prototype
       Array.prototype.paraCada = Array.prototype.forEach;
@@ -198,7 +201,6 @@
         code = code.replaceAll(/\bdetectarEvento\b/gi, "addEventListener");
         code = code.replaceAll(/\basincrono\b/gi, "async");
         code = code.replaceAll(/\ben\b/gi, "in");
-        code = code.replaceAll(/\blongitud\b/gi, "length");
         code = code.replaceAll(/\bde\b/gi, "of");
         code = code.replaceAll(/\bsi\b/gi, "if");
         code = code.replaceAll(/\bretornar\b/gi, "return");
@@ -227,10 +229,13 @@
       }catch(error){
         console.error(latjsPrefix + "[Error] " + error);
       }
+
+      Storage.prototype.tamaño = null;
       //End String prototype
       
       String.prototype.reemplazarTodo = null;
       String.prototype.reemplazar = null;
+      String.prototype.longitud = null;
       
       //End Array prototype
       Array.prototype.paraCada = null;
