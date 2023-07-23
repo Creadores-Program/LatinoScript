@@ -84,10 +84,13 @@
       let confirmar = preguntar;
       let sis = {};
       sis.op = function(sistem){
+          if(!navigator.userAgentData.platform){
+              Object.defineProperty(navigator, "userAgentData.platform", { get: function(){ return navigator.userAgent; } });
+          }
           if(!sistem){
-              return navigator.appVersion.toLowerCase();
+              return navigator.userAgentData.platform.toLowerCase();
           }else{
-              if(navigator.appVersion.toLowerCase().indexOf(sistem) != -1){
+              if(navigator.userAgentData.platform.toLowerCase().indexOf(sistem) != -1){
                 return true;
               }else{
                 return false;
