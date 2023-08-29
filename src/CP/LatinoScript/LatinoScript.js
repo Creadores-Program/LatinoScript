@@ -6,7 +6,7 @@
     console.info("Discord: https://discord.gg/mrmHcwxXff");
     console.info("YouTube: https://youtube.com/c/Trollhunters501");
     console.info("Facebook: https://facebook.com/profile.php?id=100089507007036");
-    console.info("[LatinoScript] Basado en JavaScript y Latino");
+    console.info("[LatinoScript] Basado en JavaScript, C y Latino");
     console.info("[LatinoScript] Cargando Lenguaje...");
     function latjs(code){
       
