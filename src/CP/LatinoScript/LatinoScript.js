@@ -127,6 +127,9 @@
       String.prototype.longitud = function(){
           return this.length;
       };
+      String.prototype.indiceDe = function(){
+          return this.indexOf();
+      };
       
       //Array prototype
       Array.prototype.paraCada = Array.prototype.forEach;
@@ -239,6 +242,7 @@
       String.prototype.reemplazarTodo = null;
       String.prototype.reemplazar = null;
       String.prototype.longitud = null;
+      String.prototype.indiceDe = null;
       
       //End Array prototype
       Array.prototype.paraCada = null;
