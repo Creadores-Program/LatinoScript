@@ -10,15 +10,17 @@
     console.info("[LatinoScript] Cargando Lenguaje...");
     function latjs(code){
       
-      function incluirjs(code){
-        eval(code);
+      function incluirjs(codec){
+        eval(codec);
       }
-      function incluir(url){
+      function incluir(codec){
+        latjs(codec);
+      }
+      let importar = function (url){
         fetch(url)
         .then(response => response.text())
         .then(text => latjs(text));
-      }
-      let importar = incluir;
+      };
       code = " " + code + " ";
       let latjsPrefix = "[LatinoScript] ";
       console.info(latjsPrefix + "Ejecutando " + code + "...");
