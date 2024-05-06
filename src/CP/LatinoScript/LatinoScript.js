@@ -130,7 +130,7 @@
       Array.prototype.paraCada = Array.prototype.forEach;
       
       //code remplace
-        code = code.replsceAll(/\bthrow\b/gi, "$$throw"+Math.random()+"$$");
+        code = code.replaceAll(/\bthrow\b/gi, "$$throw"+Math.random()+"$$");
         code = code.replaceAll(/\btirarError\b/gi, "throw");
         code = code.replaceAll(/\bfor\b/gi, "$$for"+Math.random()+"$$");
         code = code.replaceAll(/\bpara\b/gi, "for");
