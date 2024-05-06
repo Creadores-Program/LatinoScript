@@ -15,10 +15,13 @@ LatinoScript es un Lenguaje de programación con sintaxis en Español escrito en
 1. El Lenguaje LatinoScript facilita programar a un hispanohablante o latino principiante ya que es más fácil entender la programación en su propio idioma<br/>2. además de que está escrito en JavaScript eso significa que se puede ejecutar y usar(con el soporte adecuado) en:<br/>Páginas Web,<br/>Aplicaciones,<br/>AppsWeb,<br/>Juegos,<br/>Servidores,<br/>Etc.<br/>3. Además Funciones únicas!<br/>4. Lenguaje de nivel medio alto esto significa que es un lenguaje que se asemeja un poco a la gramática que usamos para leer y escribir.<br/>5. Código abierto cualquiera puede hacer lo que quiera con el código! extender Librerias, etc.
 <h2>Instalar LatinoScript</h2>
 <h3>Páginas Web</h3>
-Ahorita no tenemos una forma como tal pero puedes instalar un demo de Github<br/>Ejemplo de Como instalar:<br/>En tu código JavaScript tienes que poner esto:<br/>
+<br/>Ejemplo de Como instalar:<br/>En tu código JavaScript tienes que poner esto:<br/>
 
 ```html
-
+<latjs>
+//tu código 
+</latjs>
+<script src='https://cdn.jsdelivr.net/gh/Trollhunters501/LatinoScript@V0.1.0alpha/src/CP/LatinoScript/LatinoScript.js' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
 ```
 
 <h2>LICENCIA</h2>
