@@ -17,8 +17,7 @@
       };
       code = " " + code + " ";
       let latjsPrefix = "[LatinoScript] ";
-      console.info(latjsPrefix + "Ejecutando " + code + "...");
-      let mark = "{{~strng~}}";
+      let mark = "{{~strng"+Math.random()+"~}}";
       let matches1 = code.match(/'([^\\']|\\')*'/g);
       let matches2 = code.match(/"([^\\"]|\\")*"/g);
       let matches3 = code.match(/`([^\\`]|\\`)*`/g);
@@ -40,7 +39,6 @@
         alert(txt);
       };
       let consola = {};
-      consola = console;
       consola.registrar = console.log;
       consola.depurar = console.debug;
       consola.afirmar = console.assert;
@@ -53,10 +51,11 @@
       let escribirPregunta = function(prompt1, txt){
           prompt(prompt1, txt);
       }
-      let cierto = true;
-      let verdadero = true;
-      let falso = false;
-      let nulo = null;
+      const cierto = true;
+      const verdadero = true;
+      const falso = false;
+      const nulo = null;
+      
       let rango = function(start, stop=undefined, step=1){
         let startArray = stop  === undefined ? 0 : start;
         let stopArray = stop  === undefined ? start : stop;
@@ -131,35 +130,8 @@
       Array.prototype.paraCada = Array.prototype.forEach;
       
       //code remplace
-        code = code.replaceAll(/\bescribe\b/gi, "write");
-        code = code.replaceAll(/\bcontenidoHTML\b/gi, "innerHTML");
-        code = code.replaceAll(/\bsolicitarPantallaCompleta\b/gi, "requestFullScreen");
-        code = code.replaceAll(/\bestilo\b/gi, "style");
-        code = code.replaceAll(/\bcancelarPantallaCompleta\b/gi, "cancelFullScreen");
-        code = code.replaceAll(/\bdocumento\b/gi, "document");
-        code = code.replaceAll(/\bobtenerElementoPorId\b/gi, "getElementById");
-        code = code.replaceAll(/\bobtenerElementosPorNombreEtiqueta\b/gi, "getElementsByTagName");
-        code = code.replaceAll(/\bobtenerElementosPorClase\b/gi, "getElementsByClassName");
-        code = code.replaceAll(/\bunirse\b/gi, "join");
-        code = code.replaceAll(/\bdividirCadena\b/gi, "split");
-        code = code.replaceAll(/\benfocar\b/gi, "focus");
-        code = code.replaceAll(/\bcrearElemento\b/gi, "createElement");
-        code = code.replaceAll(/\bañadirNodo\b/gi, "appendChild");
-        code = code.replaceAll(/\beliminarNodo\b/gi, "removeChild");
-        code = code.replaceAll(/\bmapa\b/gi, "map");
-        code = code.replaceAll(/\bfiltrar\b/gi, "filter");
         code = code.replaceAll(/\breducir\b/gi, "reduce");
-        code = code.replaceAll(/\balguna\b/gi, "some");
         code = code.replaceAll(/\bincluye\b/gi, "includes");
-        code = code.replaceAll(/\brebanada\b/gi, "slice");
-        code = code.replaceAll(/\bempalme\b/gi, "splice");
-          
-        code = code.replaceAll(/\bMates\b/gi, "Math");
-        code = code.replaceAll(/\bpiso\b/gi, "floor");
-        code = code.replaceAll(/\baleatorio\b/gi, "random");
-        code = code.replaceAll(/\balmLocal\b/gi, "localStorage");
-        code = code.replaceAll(/\bobtenerObj\b/gi, "getItem");
-        code = code.replaceAll(/\bestableserObj\b/gi, "setItem");
         code = code.replaceAll(/\bdetener\b/gi, "stop");
         code = code.replaceAll(/\btirarError\b/gi, "throw");
         code = code.replaceAll(/\bpara\b/gi, "for");
@@ -193,14 +165,11 @@
         code = code.replaceAll(/\bcuerpo\b/gi, "body");
         code = code.replaceAll(/\bencabezados\b/gi, "headers");
         code = code.replaceAll(/\bmetodo\b/gi, "method");
-        code = code.replaceAll(/\bbuscarUrl\b/gi, "fetch");
         code = code.replaceAll(/\bosi\b/gi, "}else if");
-        code = code.replaceAll(/\bencadenar\b/gi, "stringify");
         code = code.replaceAll(/\bclase\b/gi, "class");
         code = code.replaceAll(/\bimplementos\b/gi, "implements");
         code = code.replaceAll(/\bextiende\b/gi, "extends");
         code = code.replaceAll(/\bestatico\b/gi, "static");
-        code = code.replaceAll(/\bdetectarEvento\b/gi, "addEventListener");
         code = code.replaceAll(/\basincrono\b/gi, "async");
         code = code.replaceAll(/\ben\b/gi, "in");
         code = code.replaceAll(/\bde\b/gi, "of");
