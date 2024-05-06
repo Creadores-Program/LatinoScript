@@ -142,7 +142,7 @@
         code = code.replaceAll(/\bcaso\b/gi, "case");
         code = code.replaceAll("#", "//");
         code = code.replaceAll("--", "//");
-        code = code.replaceAll("{", /\\{/);
+        code = code.replaceAll("{", "{"+Math.random());
         code = code.replaceAll(/\binicio\b/gi, "{");
         code = code.replaceAll(/\bfin\b/gi, "}");
         code = code.replaceAll(/\bsino\b/gi, "}else{");
