@@ -17,8 +17,8 @@ LatinoScript es un Lenguaje de programación con sintaxis en Español escrito en
 <h3>Páginas Web</h3>
 Ahorita no tenemos una forma como tal pero puedes instalar un demo de Github<br/>Ejemplo de Como instalar:<br/>En tu código JavaScript tienes que poner esto:<br/>
 
-```js
-próximamente
+```html
+
 ```
 
 <h2>LICENCIA</h2>
