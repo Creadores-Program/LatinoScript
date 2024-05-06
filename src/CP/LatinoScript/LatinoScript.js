@@ -10,7 +10,7 @@
       function incluir(codec){
         latjs(codec);
       }
-      let importar = function (url){
+      const importar = function (url){
         fetch(url)
         .then(response => response.text())
         .then(text => latjs(text));
@@ -150,6 +150,7 @@
         code = code.replaceAll(/\bfin\b/gi, "}");
         code = code.replaceAll(/\belse\b/gi, "$$else"+Math.random()+"$$");
         code = code.replaceAll(/\bsino\b/gi, "}else{");
+        code = code.replaceAll(/\bswitch\b/gi, "$$switch"+Math.random()+"$$");
         code = code.replaceAll(/\belegir\b/gi, "switch");
         code = code.replaceAll(/\bromper\b/gi, "break");
         code = code.replaceAll(/\bhacer\b/gi, "do{");
