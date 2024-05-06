@@ -17,7 +17,7 @@
       };
       code = " " + code + " ";
       let latjsPrefix = "[LatinoScript] ";
-      let mark = "{{~strng"+Math.random()+"~}}";
+      let mark = "$$~strng"+Math.random()+"~$$";
       let matches1 = code.match(/'([^\\']|\\')*'/g);
       let matches2 = code.match(/"([^\\"]|\\")*"/g);
       let matches3 = code.match(/`([^\\`]|\\`)*`/g);
