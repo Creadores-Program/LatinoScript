@@ -130,9 +130,6 @@
       Array.prototype.paraCada = Array.prototype.forEach;
       
       //code remplace
-        code = code.replaceAll(/\breducir\b/gi, "reduce");
-        code = code.replaceAll(/\bincluye\b/gi, "includes");
-        code = code.replaceAll(/\bdetener\b/gi, "stop");
         code = code.replaceAll(/\btirarError\b/gi, "throw");
         code = code.replaceAll(/\bpara\b/gi, "for");
         code = code.replaceAll(/\brepetir\b/gi, "for");
@@ -141,12 +138,11 @@
         code = code.replaceAll(/\bdefecto\b/gi, "default");
         code = code.replaceAll(/\bimportarjs\b/gi, "import");
         code = code.replaceAll(/\bexportarjs\b/gi, "export");
-        code = code.replaceAll(/\bnombre-modulo\b/gi, "module-name");
-        code = code.replaceAll(/\bnombre\b/gi, "name");
         code = code.replaceAll(/\bdefecto\b/gi, "default");
         code = code.replaceAll(/\bcaso\b/gi, "case");
         code = code.replaceAll("#", "//");
         code = code.replaceAll("--", "//");
+        code = code.replaceAll("{", /\\{/);
         code = code.replaceAll(/\binicio\b/gi, "{");
         code = code.replaceAll(/\bfin\b/gi, "}");
         code = code.replaceAll(/\bsino\b/gi, "}else{");
@@ -162,9 +158,6 @@
         code = code.replaceAll(/\bcontinuar\b/gi, "continue");
         code = code.replaceAll(/\btipo\b/gi, "type");
         code = code.replaceAll(/\bglobal\b/gi, "var");
-        code = code.replaceAll(/\bcuerpo\b/gi, "body");
-        code = code.replaceAll(/\bencabezados\b/gi, "headers");
-        code = code.replaceAll(/\bmetodo\b/gi, "method");
         code = code.replaceAll(/\bosi\b/gi, "}else if");
         code = code.replaceAll(/\bclase\b/gi, "class");
         code = code.replaceAll(/\bimplementos\b/gi, "implements");
