@@ -219,7 +219,7 @@
 window.addEventListener('load', function(){
     if(document.getElementsByTagName("script") != null){
         let latjsetiqueta = document.getElementsByTagName("script");
-        for(let i = 0; i < latjsetiqueta.length; i++){
+        for(let i in latjsetiqueta){
             if(latjsetiqueta[i].getAttribute('type') == null || latjsetiqueta[i].getAttribute('type') != "text/latjs") continue;
             if(latjsetiqueta[i].innerHTML != null && latjsetiqueta[i].innerHTML != ""){
                 let contenidolatjsetiqueta = latjsetiqueta[i].innerHTML;
