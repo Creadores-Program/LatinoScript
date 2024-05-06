@@ -1,13 +1,7 @@
     console.info("[LatinoScript] Iniciando...");
     console.info("[LatinoScript] Cargando...");
-    console.info("[LatinoScript] Versión 0.1.0 alpha");
+    console.info("[LatinoScript] Versión 0.2.0 alpha");
     console.info("[LatinoScript] By Creadores Program");
-    console.info("[LatinoScript] Redes Sociales:");
-    console.info("Discord: https://discord.gg/mrmHcwxXff");
-    console.info("YouTube: https://youtube.com/c/Trollhunters501");
-    console.info("Facebook: https://facebook.com/profile.php?id=100089507007036");
-    console.info("[LatinoScript] Basado en JavaScript, C y Latino");
-    console.info("[LatinoScript] Cargando Lenguaje...");
     function latjs(code){
       
       function incluirjs(codec){
@@ -255,22 +249,20 @@
       .then(response => response.text())
       .then(text => latjs(text));
     }
-    if(document.getElementsByTagName("latjs")){
-        let latjsetiqueta = document.getElementsByTagName("latjs");
-        let latjsetiquetaQuery = document.querySelector('latjs').getAttribute('src');
-        if(latjsetiquetaQuery){
-          latjsUrl(latjsetiquetaQuery);
-        }
+window.addEventListener('load', function(){
+    if(document.getElementsByTagName("script") != null){
+        let latjsetiqueta = document.getElementsByTagName("script");
         for(let i = 0; i < latjsetiqueta.length; i++){
-            latjsetiqueta[i].style.visibility = "hidden";
-            latjsetiqueta[i].style.display = "none";
-            latjsetiqueta[i].style.height = "0px";
-            latjsetiqueta[i].style.width = "0px";
+            if(latjsetiqueta[i].getAttribute('type') == null || latjsetiqueta[i].getAttribute('type') != "text/latjs") continue;
             if(latjsetiqueta[i].innerHTML != null && latjsetiqueta[i].innerHTML != ""){
                 let contenidolatjsetiqueta = latjsetiqueta[i].innerHTML;
                 latjs(contenidolatjsetiqueta);
             }
+            let latjsetiquetaQuery = latjsetiqueta[i].getAttribute('src');
+            if(latjsetiquetaQuery != null){
+                latjsUrl(latjsetiquetaQuery);
+             }
         }
     }
     console.info("[LatinoScript] Listo!");
-    console.info("[LatinoScript] Usa latjs(cod); o latjsUrl(URL); para ejecutar LatinoScript!");
+});
