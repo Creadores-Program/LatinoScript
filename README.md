@@ -21,7 +21,7 @@ LatinoScript es un Lenguaje de programación con sintaxis en Español escrito en
 <latjs>
 //tu código 
 </latjs>
-<script src='https://cdn.jsdelivr.net/gh/Trollhunters501/LatinoScript@V0.1.0alpha/src/CP/LatinoScript/LatinoScript.js' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+<script src='https://cdn.jsdelivr.net/gh/Trollhunters501/LatinoScript@0.1.0alpha/src/CP/LatinoScript/LatinoScript.js' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
 ```
 
 <h2>LICENCIA</h2>
