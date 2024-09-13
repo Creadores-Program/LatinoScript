@@ -1,7 +1,7 @@
 # LatinoScript
-<div align="center"><img src="https://github.com/Trollhunters501/LatinoScript/raw/main/Archivos%20del%20Repo/20230702_205240_0000.png" width="300" height="300"/><br/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><br/><img src="https://img.shields.io/npm/l/vue.svg" alt="License"/></div>
+<div align="center"><img src="https://github.com/Creadores-Program/LatinoScript/raw/main/Archivos%20del%20Repo/20230702_205240_0000.png" width="300" height="300"/><br/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><br/><img src="https://img.shields.io/npm/l/vue.svg" alt="License"/></div>
 <|-- |Leame Idiomas:<br/>
-  <a href="https://github.com/Trollhunters501/LatinoScript/blob/main/README.md">Español</a><br/>--|><br/>
+  <a href="https://github.com/Creadores-Program/LatinoScript/blob/main/README.md">Español</a><br/>--|><br/>
 <p>Lenguaje de programación que se puede ejecutar en casi cualquier sistema, de código abierto para latinos y de habla hispana. Escrito en JavaScript</p>
 <h2>Contenido:</h2>
 <a href="#contenido">•Contenido</a><br/>
@@ -21,9 +21,9 @@ LatinoScript es un Lenguaje de programación con sintaxis en Español escrito en
 <latjs>
 //tu código 
 </latjs>
-<script src='https://cdn.jsdelivr.net/gh/Trollhunters501/LatinoScript@0.1.0alpha/src/CP/LatinoScript/LatinoScript.js' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+<script src='https://cdn.jsdelivr.net/gh/Creadores-Program/LatinoScript@0.1.0alpha/src/CP/LatinoScript/LatinoScript.js' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
 ```
 
 <h2>LICENCIA</h2>
-Licenciado bajo la licencia <a href="https://github.com/Trollhunters501/LatinoScript/blob/main/LICENSE">MIT</a><br/>
+Licenciado bajo la licencia <a href="https://github.com/Creadores-Program/LatinoScript/blob/main/LICENSE">MIT</a><br/>
 Los Nombres de <a href="https://es.m.wikipedia.org/wiki/Latino_(lenguaje_de_programaci%C3%B3n)">Latino©</a>, <a href="https://es.wikipedia.org/wiki/C_(lenguaje_de_programaci%C3%B3n)">C©</a> y <a href="https://es.m.wikipedia.org/wiki/JavaScript">JavaScript©</a> son propiedad de los Creadores del Lenguaje de programación.
