@@ -130,9 +130,9 @@
       Array.prototype.paraCada = Array.prototype.forEach;
       
       //code remplace
-        code = code.replaceAll(/\bthrow\b/gi, "$$throw"+Math.random()+"$$");
+//        code = code.replaceAll(/\bthrow\b/gi, "$$throw"+Math.random()+"$$");
         code = code.replaceAll(/\btirarError\b/gi, "throw");
-        code = code.replaceAll(/\bfor\b/gi, "$$for"+Math.random()+"$$");
+//        code = code.replaceAll(/\bfor\b/gi, "$$for"+Math.random()+"$$");
         code = code.replaceAll(/\bpara\b/gi, "for");
         code = code.replaceAll(/\brepetir\b/gi, "for");
         code = code.replaceAll(/\bdesde\b/gi, "from");
@@ -148,9 +148,9 @@
         code = code.replaceAll(/\binicio\b/gi, "{");
         code = code.replaceAll("}", "$$llave2"+Math.random()+"$$");
         code = code.replaceAll(/\bfin\b/gi, "}");
-        code = code.replaceAll(/\belse\b/gi, "$$else"+Math.random()+"$$");
+//        code = code.replaceAll(/\belse\b/gi, "$$else"+Math.random()+"$$");
         code = code.replaceAll(/\bsino\b/gi, "}else{");
-        code = code.replaceAll(/\bswitch\b/gi, "$$switch"+Math.random()+"$$");
+//        code = code.replaceAll(/\bswitch\b/gi, "$$switch"+Math.random()+"$$");
         code = code.replaceAll(/\belegir\b/gi, "switch");
         code = code.replaceAll(/\bromper\b/gi, "break");
         code = code.replaceAll(/\bhacer\b/gi, "do{");
