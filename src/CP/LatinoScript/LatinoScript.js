@@ -219,13 +219,14 @@
 window.addEventListener('load', function(){
     if(document.getElementsByTagName("script") != null){
         let latjsetiqueta = document.getElementsByTagName("script");
-        for(let i in latjsetiqueta){
-            if(latjsetiqueta[i].getAttribute('type') == null || latjsetiqueta[i].getAttribute('type') != "text/latjs") continue;
-            if(latjsetiqueta[i].innerHTML != null && latjsetiqueta[i].innerHTML != ""){
-                let contenidolatjsetiqueta = latjsetiqueta[i].innerHTML;
+        for(let i of latjsetiqueta){
+            if(i.hasAttribute('type') || i.getAttribute('type') != "text/latjs") continue;
+            if(i.innerHTML != null && i.innerHTML != ""){
+                let contenidolatjsetiqueta = i.innerHTML;
                 latjs(contenidolatjsetiqueta);
             }
-            let latjsetiquetaQuery = latjsetiqueta[i].getAttribute('src');
+            if(!i.hasAttribute('src')) continue;
+            let latjsetiquetaQuery = i.getAttribute('src');
             if(latjsetiquetaQuery != null){
                 latjsUrl(latjsetiquetaQuery);
              }
