@@ -1,5 +1,10 @@
-# LatinoScript
+# LatinoScript (Descontinuado)
 <div align="center"><img src="https://github.com/Creadores-Program/LatinoScript/raw/main/Archivos%20del%20Repo/20230702_205240_0000.png" width="300" height="300"/><br/><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><br/><img src="https://img.shields.io/npm/l/vue.svg" alt="License"/></div>
+
+> [!NOTE]
+> ESTE YA ESTA DESCONTINUADO POR ERRORES SIN SENTIDO EN LA VERSIÓN 0.2 SOLO SE RECOMIENDA USAR LA VERSIÓN DE LANZAMIENTOS
+> Si quieres usar funciones en español algunas de Latino y LatinoScript en tu lenguaje de tu preferencia puedes usar [MultiLatino](https://github.com/Creadores-Program/MultiLatino)
+
 <|-- |Leame Idiomas:<br/>
   <a href="https://github.com/Creadores-Program/LatinoScript/blob/main/README.md">Español</a><br/>--|><br/>
 <p>Lenguaje de programación que se puede ejecutar en casi cualquier sistema, de código abierto para latinos y de habla hispana. Escrito en JavaScript</p>
