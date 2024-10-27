@@ -3,7 +3,7 @@
 
 > [!NOTE]
 > ESTE YA ESTA DESCONTINUADO POR ERRORES SIN SENTIDO EN LA VERSIÓN 0.2 SOLO SE RECOMIENDA USAR LA VERSIÓN DE LANZAMIENTOS
-> Si quieres usar funciones en español algunas de Latino y LatinoScript en tu lenguaje de tu preferencia puedes usar [MultiLatino](https://github.com/Creadores-Program/MultiLatino)
+> Si quieres usar funciones en español puedes usar Socket.IO usando de base el editor latino del Lenguaje de programacion Latino!
 
 <|-- |Leame Idiomas:<br/>
   <a href="https://github.com/Creadores-Program/LatinoScript/blob/main/README.md">Español</a><br/>--|><br/>
