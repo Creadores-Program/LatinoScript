@@ -14,7 +14,9 @@ function latjs(code){
     llaveun: ("LT_llave1"+Math.random()+"_LT").replaceAll(".", ""),
     llavedo: ("LT_llave2"+Math.random()+"_LT").replaceAll(".", ""),
     forsF: ("LT_forF"+Math.random()+"_LT").replaceAll(".", ""),
-    switchsF: ("LT_switch"+Math.random()+"_LT").replaceAll(".", "")
+    switchsF: ("LT_switch"+Math.random()+"_LT").replaceAll(".", ""),
+    casesF: ("LT_case"+Math.random()+"_LT").replaceAll(".", ""),
+    trueF: ("LT_true"+Math.random()+"_LT").replaceAll(".", "")
   };
   let matches1 = code.match(/'([^\\']|\\')*'/g);
   let matches2 = code.match(/"([^\\"]|\\")*"/g);
@@ -43,8 +45,21 @@ function latjs(code){
     }
     return code;
   }
-  function precesarLlaves(prefix, code){}//aqui
+  function precesarLlaves(code){
+    code = code.replaceAll("{", prefixs.llaveun)
+       .replaceAll("}", prefixs.llavedo)
+       .replaceAll(/\binicio\b/gi, "{")
+       .replaceAll(/\bfin\b/gi, "}");
+    return code;
+  }
+  function procesarPalabrasDef(code){
+    code = code.replaceAll("case", prefixs.casesF)
+      .replaceAll(/\bcaso\b/gi, "case")
+      .replaceAll("true", prefixs.trueF);
+      .replaceAll();
+  }
   code = procesarCadenas(prefixs.cadenas, code);
+  code = procesarLlaves(code);
   
   function incluirjs(codec){
     eval(codec);
