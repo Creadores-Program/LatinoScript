@@ -16,7 +16,10 @@ function latjs(code){
     forsF: ("LT_forF"+Math.random()+"_LT").replaceAll(".", ""),
     switchsF: ("LT_switch"+Math.random()+"_LT").replaceAll(".", ""),
     casesF: ("LT_case"+Math.random()+"_LT").replaceAll(".", ""),
-    trueF: ("LT_true"+Math.random()+"_LT").replaceAll(".", "")
+    trueF: ("LT_true"+Math.random()+"_LT").replaceAll(".", ""),
+    falseF: ("LT_false"+Math.random()+"_LT").replaceAll(".", ""),
+    continueF: ("LT_continue"+Math.random()+"_LT").replaceAll(".", ""),
+    defaultF: ("LT_default"+Math.random()+"_LT").replaceAll(".", "")
   };
   let matches1 = code.match(/'([^\\']|\\')*'/g);
   let matches2 = code.match(/"([^\\"]|\\")*"/g);
@@ -55,8 +58,14 @@ function latjs(code){
   function procesarPalabrasDef(code){
     code = code.replaceAll("case", prefixs.casesF)
       .replaceAll(/\bcaso\b/gi, "case")
-      .replaceAll("true", prefixs.trueF);
-      .replaceAll();
+      .replaceAll("true", prefixs.trueF)
+      .replaceAll(/\bverdadero\b/gi, "true")
+      .replaceAll("false", prefixs.falseF)
+      .replaceAll(/\bfalso\b/gi, "false")
+      .replaceAll(/\bcierto\b/gi, "true")
+      .replaceAll("continue", prefixs.continueF)
+      .replaceAll(/\bcontinuar\b/gi, "continue")
+      .replaceAll("default", prefixs.defaultF)
   }
   code = procesarCadenas(prefixs.cadenas, code);
   code = procesarLlaves(code);
