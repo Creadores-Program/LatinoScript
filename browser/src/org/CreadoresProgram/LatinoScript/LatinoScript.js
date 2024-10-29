@@ -1,14 +1,50 @@
 console.info("[LatinoScript] Iniciando...");
 console.info("[LatinoScript] Cargando...");
-console.info("[LatinoScript] Versión 0.1.0 alpha");
+console.info("[LatinoScript] Versión 0.2.0 alpha");
 console.info("[LatinoScript] By Creadores Program");
 console.info("[LatinoScript] Redes Sociales:");
 console.info("Discord: https://discord.gg/mrmHcwxXff");
-console.info("YouTube: https://youtube.com/c/Trollhunters501");
-console.info("Facebook: https://facebook.com/profile.php?id=100089507007036");
-console.info("[LatinoScript] Basado en JavaScript, C y Latino");
+console.info("[LatinoScript] Basado en JavaScript, Python y Latino");
 console.info("[LatinoScript] Cargando Lenguaje...");
 function latjs(code){
+
+  let prefixs = {
+    cadenas: "&&~cads"+Math.random()+"~&&",
+    ifsF: ("LT_ifF"+Math.random()+"_LT").replaceAll(".", ""),
+    llaveun: ("LT_llave1"+Math.random()+"_LT").replaceAll(".", ""),
+    llavedo: ("LT_llave2"+Math.random()+"_LT").replaceAll(".", ""),
+    forsF: ("LT_forF"+Math.random()+"_LT").replaceAll(".", ""),
+    switchsF: ("LT_switch"+Math.random()+"_LT").replaceAll(".", "")
+  };
+  let matches1 = code.match(/'([^\\']|\\')*'/g);
+  let matches2 = code.match(/"([^\\"]|\\")*"/g);
+  let matches3 = code.match(/`([^\\`]|\\`)*`/g);
+  function procesarCadenas(prefix, code){
+    if(matches1 != null){
+      matches1.forEach(match => code = code.replace(match, mark));
+    }
+    if(matches2 != null){
+      matches2.forEach(match => code = code.replace(match, mark));
+    }
+    if(matches3 != null){
+      matches3.forEach(match => code = code.replace(match, mark));
+    }
+    return code;
+  }
+  function decodCadenas(prefix, code){
+    if(matches1 != null){
+      matches1.forEach(match => code = code.replace(mark, match));
+    }
+    if(matches2 != null){
+      matches2.forEach(match => code = code.replace(mark, match));
+    }
+    if(matches3 != null){
+      matches3.forEach(match => code = code.replace(mark, match));
+    }
+    return code;
+  }
+  function precesarLlaves(prefix, code){}//aqui
+  code = procesarCadenas(prefixs.cadenas, code);
   
   function incluirjs(codec){
     eval(codec);
