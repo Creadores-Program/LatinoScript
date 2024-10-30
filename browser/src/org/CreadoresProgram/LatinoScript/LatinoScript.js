@@ -19,7 +19,23 @@ function latjs(code){
     trueF: ("LT_true"+Math.random()+"_LT").replaceAll(".", ""),
     falseF: ("LT_false"+Math.random()+"_LT").replaceAll(".", ""),
     continueF: ("LT_continue"+Math.random()+"_LT").replaceAll(".", ""),
-    defaultF: ("LT_default"+Math.random()+"_LT").replaceAll(".", "")
+    defaultF: ("LT_default"+Math.random()+"_LT").replaceAll(".", ""),
+    functi: ("LT_function"+Math.random()+"_LT").replaceAll(".", ""),
+    varsF: ("LT_var"+Math.random()+"_LT").replaceAll(".", ""),
+    letsF: ("LT_let"+Math.random()+"_LT").replaceAll(".", ""),
+    constsF: ("LT_const"+Math.random()+"_LT").replaceAll(".", ""),
+    whilesF: ("LT_while"+Math.random()+"_LT").replaceAll(".", ""),
+    nullsF: ("LT_null"+Math.random()+"_LT").replaceAll(".", ""),
+    elsesF: ("LT_else"+Math.random()+"_LT").replaceAll(".", ""),
+    breaksF: ("LT_break"+Math.random()+"_LT").replaceAll(".", ""),
+    retF: ("LT_retur"+Math.random()+"_LT").replaceAll(".", ""),
+    classF: ("LT_class"+Math.random()+"_LT").replaceAll(".", ""),
+    staticsF: ("LT_static"+Math.random()+ "_LT").replaceAll(".", ""),
+    extendsF: ("LT_extends"+Math.random()+"_LT").replaceAll(".", ""),
+    insF: ("LT_in"+Math.random()+"_LT").replaceAll(".", ""),
+    stringsF: ("LT_String"+Math.random()+"_LT").replaceAll(".", ""),
+    arraysF: ("LT_Array"+Math.random()+"_LT").replaceAll(".", ""),
+    thisF: ("LT_this"+Math.random()+"_LT").replaceAll(".", "")
   };
   let matches1 = code.match(/'([^\\']|\\')*'/g);
   let matches2 = code.match(/"([^\\"]|\\")*"/g);
@@ -56,20 +72,68 @@ function latjs(code){
     return code;
   }
   function procesarPalabrasDef(code){
-    code = code.replaceAll("case", prefixs.casesF)
+    code = code.replaceAll(/\bcase\b/gi, prefixs.casesF)
       .replaceAll(/\bcaso\b/gi, "case")
-      .replaceAll("true", prefixs.trueF)
+      .replaceAll(/\btrue\b/gi, prefixs.trueF)
       .replaceAll(/\bverdadero\b/gi, "true")
-      .replaceAll("false", prefixs.falseF)
+      .replaceAll(/\bfalse\b/gi, prefixs.falseF)
       .replaceAll(/\bfalso\b/gi, "false")
       .replaceAll(/\bcierto\b/gi, "true")
-      .replaceAll("continue", prefixs.continueF)
+      .replaceAll(/\bcontinue\b/gi, prefixs.continueF)
       .replaceAll(/\bcontinuar\b/gi, "continue")
-      .replaceAll("default", prefixs.defaultF)
+      .replaceAll(/\bdefault\b/gi, prefixs.defaultF)
+      .replaceAll(/\bdefecto\b/gi, "default")
+      .replaceAll(/\botro\b/gi, "default")
+      .replaceAll(/\bfor\b/gi, prefixs.forsF)
+      .replaceAll(/\bdesde\b/gi, "for")
+      .replaceAll(/\bswitch\b/gi, prefixs.switchsF)
+      .replaceAll(/\belegir\b/gi, "switch")
+      .replaceAll(/\bfunction\b/gi, prefixs.functi)
+      .replaceAll(/\bfun\b/gi, "function")
+      .replaceAll(/\bfuncion\b/gi, "function")
+      .replaceAll(/\bvar\b/gi, prefixs.varsF)
+      .replaceAll(/\bglobal\b/gi, "var")
+      .replaceAll(/\blet\b/gi, prefixs.letsF)
+      .replaceAll(/\blocal\b/gi, "let")
+      .replaceAll(/\bconst\b/gi, prefixs.constsF)
+      .replaceAll(/\bconstante\b/gi, "const")
+      .replaceAll(/\bwhile\b/gi, prefixs.whilesF)
+      .replaceAll(/\bmientras\b/gi, "while")
+      .replaceAll(/\bnull\b/gi, prefixs.nullsF)
+      .replaceAll(/\bnulo\b/gi, "null")
+      .replaceAll(/\bif\b/gi, prefixs.ifsF)
+      .replaceAll(/\bsi\b/gi, "if")
+      .replaceAll(/\belse\b/gi, prefixs.elsesF)
+      .replaceAll(/\bosi\b/gi, "else if")
+      .replaceAll(/\bsino\b/gi, "else")
+      .replaceAll(/\breturn\b/gi, prefixs.retF)
+      .replaceAll(/\bret\b/gi, "return")
+      .replaceAll(/\bretorno\b/gi, "return")
+      .replaceAll(/\bretornar\b/gi, "return")
+      .replaceAll(/\bbreak\b/gi, prefixs.breaksF)
+      .replaceAll(/\bromper\b/gi, "break")
+      .replaceAll(/\bhasta\b/gi, "")
+      .replaceAll(/\brepetir\b/gi, "do")
+      .replaceAll(/\bpara\b/gi, "for")
+      .replaceAll(/\bir\b/gi, "return")
+      .replaceAll(/\bclass\b/gi, prefixs.classF)
+      .replaceAll(/\bclase\b/gi, "class")
+      .replaceAll(/\bstatic\b/gi, prefixs.staticsF)
+      .replaceAll(/\bestatico\b/gi, "static")
+      .replaceAll(/\bextends\b/gi, prefixs.extendsF)
+      .replaceAll(/\bextender\b/gi, "extends")
+      .replaceAll(/\bin\b/gi, prefixs.insF)
+      .replaceAll(/\ben\b/gi, "in")
+      .replaceAll(/\bString\b/gi, prefixs.stringsF)
+      .replaceAll(/\bArray\b/gi, prefixs.arraysF)
+      .replaceAll(/\bthis\b/gi, prefixs.thisF)
+      .replaceAll(/\besto\b/gi, "this");
+    return code;
   }
   code = procesarCadenas(prefixs.cadenas, code);
   code = procesarLlaves(code);
-  
+  code = procesarPalabrasDef(code);
+  code = decodCadenas(prefixs.cadenas, code);
   function incluirjs(codec){
     eval(codec);
   }
@@ -177,137 +241,11 @@ function latjs(code){
           default: return [+(size / 1024 / 1024).toFixed(3),'MB'].join('');
       }
   };
-  //String prototype
-  let Cadena = {};
-  Cadena.prototipo = String.prototype;
-  Cadena = String;
-  let Formacion = {};
-  Formacion.prototipo = Array.prototype;
-  Formacion = Array;
-  String.prototype.reemplazarTodo = String.prototype.replaceAll;
-  String.prototype.reemplazar = String.prototype.replace;
-  String.prototype.longitud = function(){
-      return this.length;
-  };
-  String.prototype.indiceDe = function(){
-      return this.indexOf();
-  };
-  
-  //Array prototype
-  Array.prototype.paraCada = Array.prototype.forEach;
-  
-  //code remplace
-    code = code.replaceAll(/\bescribe\b/gi, "write");
-    code = code.replaceAll(/\bcontenidoHTML\b/gi, "innerHTML");
-    code = code.replaceAll(/\bsolicitarPantallaCompleta\b/gi, "requestFullScreen");
-    code = code.replaceAll(/\bestilo\b/gi, "style");
-    code = code.replaceAll(/\bcancelarPantallaCompleta\b/gi, "cancelFullScreen");
-    code = code.replaceAll(/\bdocumento\b/gi, "document");
-    code = code.replaceAll(/\bobtenerElementoPorId\b/gi, "getElementById");
-    code = code.replaceAll(/\bobtenerElementosPorNombreEtiqueta\b/gi, "getElementsByTagName");
-    code = code.replaceAll(/\bobtenerElementosPorClase\b/gi, "getElementsByClassName");
-    code = code.replaceAll(/\bunirse\b/gi, "join");
-    code = code.replaceAll(/\bdividirCadena\b/gi, "split");
-    code = code.replaceAll(/\benfocar\b/gi, "focus");
-    code = code.replaceAll(/\bcrearElemento\b/gi, "createElement");
-    code = code.replaceAll(/\bañadirNodo\b/gi, "appendChild");
-    code = code.replaceAll(/\beliminarNodo\b/gi, "removeChild");
-    code = code.replaceAll(/\bmapa\b/gi, "map");
-    code = code.replaceAll(/\bfiltrar\b/gi, "filter");
-    code = code.replaceAll(/\breducir\b/gi, "reduce");
-    code = code.replaceAll(/\balguna\b/gi, "some");
-    code = code.replaceAll(/\bincluye\b/gi, "includes");
-    code = code.replaceAll(/\brebanada\b/gi, "slice");
-    code = code.replaceAll(/\bempalme\b/gi, "splice");
-      
-    code = code.replaceAll(/\bMates\b/gi, "Math");
-    code = code.replaceAll(/\bpiso\b/gi, "floor");
-    code = code.replaceAll(/\baleatorio\b/gi, "random");
-    code = code.replaceAll(/\balmLocal\b/gi, "localStorage");
-    code = code.replaceAll(/\bobtenerObj\b/gi, "getItem");
-    code = code.replaceAll(/\bestableserObj\b/gi, "setItem");
-    code = code.replaceAll(/\bdetener\b/gi, "stop");
-    code = code.replaceAll(/\btirarError\b/gi, "throw");
-    code = code.replaceAll(/\bpara\b/gi, "for");
-    code = code.replaceAll(/\brepetir\b/gi, "for");
-    code = code.replaceAll(/\bdesde\b/gi, "from");
-    code = code.replaceAll(/\botro\b/gi, "default");
-    code = code.replaceAll(/\bdefecto\b/gi, "default");
-    code = code.replaceAll(/\bimportarjs\b/gi, "import");
-    code = code.replaceAll(/\bexportarjs\b/gi, "export");
-    code = code.replaceAll(/\bnombre-modulo\b/gi, "module-name");
-    code = code.replaceAll(/\bnombre\b/gi, "name");
-    code = code.replaceAll(/\bdefecto\b/gi, "default");
-    code = code.replaceAll(/\bcaso\b/gi, "case");
-    code = code.replaceAll("#", "//");
-    code = code.replaceAll("--", "//");
-    code = code.replaceAll(/\binicio\b/gi, "{");
-    code = code.replaceAll(/\bfin\b/gi, "}");
-    code = code.replaceAll(/\bsino\b/gi, "}else{");
-    code = code.replaceAll(/\belegir\b/gi, "switch");
-    code = code.replaceAll(/\bromper\b/gi, "break");
-    code = code.replaceAll(/\bhacer\b/gi, "do{");
-    code = code.replaceAll(/\bmientras\b/gi, "}while");
-    code = code.replaceAll(/\bfuncion\b/gi, "function");
-    code = code.replaceAll(/\blocal\b/gi, "let");
-    code = code.replaceAll(/\bconstante\b/gi, "const");
-    code = code.replaceAll(/\bnuevo\b/gi, "new");
-    code = code.replaceAll(/\bcomo\b/gi, "as");
-    code = code.replaceAll(/\bcontinuar\b/gi, "continue");
-    code = code.replaceAll(/\btipo\b/gi, "type");
-    code = code.replaceAll(/\bglobal\b/gi, "var");
-    code = code.replaceAll(/\bcuerpo\b/gi, "body");
-    code = code.replaceAll(/\bencabezados\b/gi, "headers");
-    code = code.replaceAll(/\bmetodo\b/gi, "method");
-    code = code.replaceAll(/\bbuscarUrl\b/gi, "fetch");
-    code = code.replaceAll(/\bosi\b/gi, "}else if");
-    code = code.replaceAll(/\bencadenar\b/gi, "stringify");
-    code = code.replaceAll(/\bclase\b/gi, "class");
-    code = code.replaceAll(/\bimplementos\b/gi, "implements");
-    code = code.replaceAll(/\bextiende\b/gi, "extends");
-    code = code.replaceAll(/\bestatico\b/gi, "static");
-    code = code.replaceAll(/\bdetectarEvento\b/gi, "addEventListener");
-    code = code.replaceAll(/\basincrono\b/gi, "async");
-    code = code.replaceAll(/\ben\b/gi, "in");
-    code = code.replaceAll(/\bde\b/gi, "of");
-    code = code.replaceAll(/\bsi\b/gi, "if");
-    code = code.replaceAll(/\bretornar\b/gi, "return");
-    code = code.replaceAll(/\bregresar\b/gi, "return");
-    code = code.replaceAll(/\bret\b/gi, "return");
-    code = code.replaceAll(/\bir\b/gi, "return");
-    code = code.replaceAll(/\bfun\b/gi, "function");
-    code = code.replaceAll(/\besto\b/gi, "this");
-    code = code.replaceAll(/\beste\b/gi, "this");
-    code = code.replaceAll(/\besperar\b/gi, "await");
-    code = code.replaceAll(/\bintentar\b/gi, "try");
-    code = code.replaceAll(/\batrapar\b/gi, "catch");
-    code = code.replaceAll(/\bcapturar\b/gi, "catch");
-    code = code.replaceAll(/\bfinalmente\b/gi, "finally");
-  if(matches1 != null){
-    matches1.forEach(match => code = code.replace(mark, match));
-  }
-  if(matches2 != null){
-    matches2.forEach(match => code = code.replace(mark, match));
-  }
-  if(matches3 != null){
-    matches3.forEach(match => code = code.replace(mark, match));
-  }
   try{
     eval(code);
   }catch(error){
     console.error(latjsPrefix + "[Error] " + error);
   }
-
-  delete Storage.prototype.tamaño;
-  //End String prototype
-  
-  delete String.prototype.reemplazarTodo;
-  delete String.prototype.reemplazar;
-  delete String.prototype.longitud;
-  delete String.prototype.indiceDe;
-  
-  //End Array prototype
-  delete Array.prototype.paraCada;
   
 }
 function latjsUrl(url){
