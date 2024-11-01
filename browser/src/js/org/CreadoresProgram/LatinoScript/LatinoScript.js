@@ -22,7 +22,7 @@ class LatinoScript{
     this.contextLat += "\n" + nam + " = " + this.convertToLat(dat);
   }
   async loadLatBase(){
-    let respo = await fetch("https://cdn.jsdelivr.net/gh/Creadores-Program/LatinoScript/browser/src/lat/org/CreadoresProgram/LatinoScript/JsApi.lat");
+    let respo = await fetch("...../lat/org/CreadoresProgram/LatinoScript/JsApi.lat");
     let codelat = await respo.text();
     this.baseLat = codelat;
   }

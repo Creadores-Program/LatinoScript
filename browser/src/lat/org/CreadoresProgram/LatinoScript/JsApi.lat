@@ -37,3 +37,31 @@ global JsContext = {
     "document": JsObject("document"),
     "InstanciaLatino": JsObject("InstanciaLatino")
 }
+funcion evalJS(evalJSLatList)
+    strevalLatJS = ""
+    desde (i = 0; i < lista.longitud(evalJSLatList); i++)
+        strevalLatJS = strevalLatJS .. "." .. evalJSLatList[i][0]
+        si (evalJSLatList[i][1] != nulo)
+            subargs = acadena(evalJSLatList[i][1])
+            subargs[0] = "("
+            subargs[cadena.longitud(subargs) - 1] = ")"
+            strevalLatJS = strevalLatJS .. subargs
+        fin
+    fin
+    escribir("%jsContext%" .. strevalLatJS .. ";")
+fin
+funcion getJS(evalJSLatList)
+    strevalLatJS = ""
+    desde (i = 0; i < lista.longitud(evalJSLatList); i++)
+        strevalLatJS = strevalLatJS .. "." .. evalJSLatList[i][0]
+        si (evalJSLatList[i][1] != nulo)
+            subargs = acadena(evalJSLatList[i][1])
+            subargs[0] = "("
+            subargs[cadena.longitud(subargs) - 1] = ")"
+            strevalLatJS = strevalLatJS .. subargs
+        fin
+    fin
+    escribir("%jsContext%%get%" .. strevalLatJS .. ";")
+    resultadoLatJsObj = leer()
+    ret cadena.ejecutar("ret " .. resultadoLatJsObj)
+fin
