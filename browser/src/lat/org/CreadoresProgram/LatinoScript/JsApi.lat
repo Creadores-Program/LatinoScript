@@ -30,7 +30,7 @@ funcion JsObject(code)
         fin
     }
     mi.codigo = code
-    retorno cadena.ejecutar("ret " .. acadena(mi))
+    retorno mi
 fin
 global JsContext = {
     "window": JsObject("window"),
