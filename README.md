@@ -3,7 +3,7 @@
 
 > [!NOTE]
 > ESTE YA ESTA DESCONTINUADO POR ERRORES SIN SENTIDO EN LA VERSIÓN 0.2 SOLO SE RECOMIENDA USAR LA VERSIÓN DE LANZAMIENTOS
-> Si quieres usar funciones en español puedes usar Socket.IO usando de base el editor latino del Lenguaje de programacion Latino!
+> Si quieres usar funciones en español puedes usar Socket.IO usando de base el editor latino del Lenguaje de programacion Latino! o Usar [EsJS](https://es.js.org/)
 
 <|-- |Leame Idiomas:<br/>
   <a href="https://github.com/Creadores-Program/LatinoScript/blob/main/README.md">Español</a><br/>--|><br/>
